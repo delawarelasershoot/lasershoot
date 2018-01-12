@@ -24,7 +24,7 @@ f = open('test.csv', 'w')
 prevTimeStamp = str(time.time())
 
 while(True):
-	if(prevTimeStamp != str(time.time()))
+	if(prevTimeStamp != str(time.time())):
 		f.write(str(time.time()) + '\t' + str(GPIO.input(ir)) +'\r\n')
 		prevTimeStamp = str(time.time())
 		
