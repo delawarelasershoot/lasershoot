@@ -20,6 +20,7 @@ GPIO.setup(ir,GPIO.IN)
 
 
 f = open('test.csv', 'w')
+<<<<<<< HEAD:testPy.py
 f.write('\n')
 while(True):
     print(GPIO.input(ir))
@@ -29,5 +30,15 @@ while(True):
         #time.sleep(1)
     else:
         print(GPIO.input(ir))
+=======
+
+prevTimeStamp = str(time.time())
+
+while(True):
+	if(prevTimeStamp != str(time.time())):
+		f.write(str(time.time()) + '\t' + str(GPIO.input(ir)) +'\r\n')
+		prevTimeStamp = str(time.time())
+		
+>>>>>>> 0daddc7f23df15dbef146ccd49595905b9d57823:testPi.python
 	
 
