@@ -20,9 +20,14 @@ GPIO.setup(ir,GPIO.IN)
 
 
 f = open('test.csv', 'w')
-
+f.write('\n')
 while(True):
-	f.write(str(time.time()) + '\t' + str(GPIO.input(ir)) +'\r\n')
-		
+    print(GPIO.input(ir))
+    if GPIO.input(ir) == 1:
+        print(GPIO.input(ir))
+        f.write(str(time.time()) + '\t' + str(GPIO.input(ir)) +'\r')
+        #time.sleep(1)
+    else:
+        print(GPIO.input(ir))
 	
 
